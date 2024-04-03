@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ccrecorder",
+  "version": "${version}",
+  "name": "CCRecorder",
+  "description": "记录玩家执行的命令以及发送的聊天信息，并保存到数据库",
+  "authors": [
+    "RTAkland"
+  ],
+  "contact": {
+    "website": "https://github.com/DangoTown/CCRecord",
+    "repo": "https://github.com/DangoTown/CCRecord"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/ccrecorder/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "cn.rtast.ccrecorder.CCRecorder"
+      }
+    ]
+  },
+  "mixins": [
+    "ccrecorder.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
